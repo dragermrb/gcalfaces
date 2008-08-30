@@ -1,0 +1,145 @@
+<script language="javascript" type="text/javascript">
+{literal}
+	$(document).ready(function(){
+		$('.date').datepicker({dateFormat: 'dd/mm/yy', firstDay: 1, beforeShow: EECustomRange});
+	});
+	
+	function EECustomRange(input) {
+		var minDate=null;
+		var maxDate=null;
+		
+		switch(input.id){
+			/*
+			case 'startDate0':
+				minDate=null;
+				maxDate=$('#endDate0').datepicker('getDate');
+				break;
+			case 'endDate0':
+				minDate=$('#startDate0').datepicker('getDate');
+				maxDate=null;
+				break;
+				
+			case 'startDate1':
+				minDate=null;
+				maxDate=$('#endDate1').datepicker('getDate');
+				break;
+			case 'endDate1':
+				minDate=$('#startDate1').datepicker('getDate');
+				maxDate=null;
+				break;
+			*/
+			case 'startDate2':
+				minDate=null;
+				maxDate=$('#endDate2').datepicker('getDate');
+				break;
+			case 'endDate2':
+				minDate=$('#startDate2').datepicker('getDate');
+				maxDate=null;
+				break;
+			default:
+				minDate=null;
+				maxDate=null;
+		}
+	 
+		return {minDate: minDate, maxDate: maxDate}; 
+	}
+	
+	function editCongress(formId, order){
+		if (order==0 || order==1){
+			$('#endDate'+order).val($('#startDate'+order).val());
+			$('#endDate'+order).val($('#startDate'+order).val());
+		}
+		
+		GCalFaces.editEvent(formId);
+	}
+{/literal}
+</script>
+
+
+
+<h2 style="color: #3B5998">Modificar Congreso</h2>
+<br />
+
+<div class="itemForm">
+	<div class="itemFormTitulo">Nombre</div>
+	<div class="itemFormInput">
+		<input type="text" id="tagValue" style="width: 240px" class="inputNode" readonly="readonly" name="tagValue" value="{$tagValue}" />
+	</div>
+</div>
+<div class="clear"></div>
+<br />
+
+
+<form name="editEventForm0" id="editEventForm0" action="">
+	<input  type="hidden" name="eventId" value="{$eventId[0]}" />	
+	<div class="singleEvent">
+		<div class="itemForm">
+			<div class="itemFormTitulo">Deadline</div>
+			<input type="hidden" id="title0" name="title" value="{$title[0]}" />
+			<input type="hidden" id="content0" name="content" value="{$content[0]}" />
+			<input type="hidden" id="endDate0" name="endDate" value="{$endDate[0]}"/>
+			<input type="hidden" id="were0" name="were" value="{$where[0]}"/>
+			<div class="itemFormInput">
+				<input type="text" id="startDate0" name="startDate" class="date inputNode" value="{$startDate[0]}" />
+			</div>
+		</div>
+	</div>
+	
+	<input type="button" class="btnSave" alt="Guardar" title="Guardar" onclick="editCongress('editEventForm0', 0);"/>
+	<!-- <input type="button" value="Borrar Examen" onclick="GCalFaces.deleteEvent('editEventForm0');"/>-->
+</form>	
+
+<div class="clear"></div>
+
+<form name="editEventForm1" id="editEventForm1" action="">
+	<input  type="hidden" name="eventId" value="{$eventId[1]}" />	
+	<div class="singleEvent">
+		<div class="itemForm">
+			<div class="itemFormTitulo">Notification</div>
+			<input type="hidden" id="title1" name="title" value="{$title[1]}" />
+			<input type="hidden" id="content1" name="content" value="{$content[1]}" />
+			<input type="hidden" id="endDate1" name="endDate" value="{$endDate[1]}"/>
+			<input type="hidden" id="were1" name="were" value="{$where[1]}"/>
+			<div class="itemFormInput">
+				<input type="text" id="startDate1" name="startDate" class="date inputNode" value="{$startDate[1]}" />
+			</div>
+		</div>
+	</div>
+	
+	<input type="button" class="btnSave" alt="Guardar" title="Guardar" onclick="editCongress('editEventForm1', 1);"/>
+	<!-- <input type="button" class="btnDelete" alt="Borrar Examen" title="Borrar" onclick="GCalFaces.deleteEvent('editEventForm1');"/>-->
+</form>
+
+<div class="clear"></div>
+
+<form name="editEventForm2" id="editEventForm2" action="">
+	<input  type="hidden" name="eventId" value="{$eventId[2]}" />	
+	<div class="singleEvent">
+		<div class="itemForm">
+			<div class="itemFormTitulo">Congreso</div>
+			<input type="hidden" id="title2" name="title" value="{$title[2]}" />
+			<input type="hidden" id="content2" name="content" value="{$content[2]}" />
+			<input type="hidden" id="were2" name="were" value="{$where[2]}"/>
+			<div class="itemFormInput">
+				<input type="text" id="startDate2" name="startDate" class="date inputNode" value="{$startDate[2]}" />
+			</div>
+			<div class="itemFormInput">
+				<input type="text" id="endDate2" name="endDate" class="date inputNode" value="{$endDate[2]}" />
+			</div>
+		</div>
+	</div>
+	
+	<input type="button" class="btnSave" alt="Guardar" title="Guardar" onclick="editCongressGCalFaces.editEvent('editEventForm2');"/>
+</form>
+
+	
+<div class="clear"></div>
+<br />
+<br />
+<form name="editEventForm3" id="editEventForm3" action="">
+	<input  type="hidden" name="tagName" value="{$tagName}" />
+	<input  type="hidden" name="tagValue" value="{$tagValue}" />
+	
+	<input type="button" value="Borrar Congreso" 
+		onclick="GCalFaces.deleteEvent('editEventForm3');"/>
+</form>
