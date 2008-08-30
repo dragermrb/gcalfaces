@@ -1,0 +1,147 @@
+{include file="$templateFolder/header.html"}
+<script>
+{literal}
+	$(document).ready(function(){
+		$("#tv_tabs > ul").tabs();
+	});
+{/literal}
+</script>
+
+<div class="headerInfo">
+	<h2>Gesti&oacute;n del calendario</h2>
+	<h3>{$calendarAuthorName} {if $calendarAuthorEmail!=''}&lang;{$calendarAuthorEmail}&rang;{/if}</h3>
+	<h3>{if $calendarTitle!=$calendarAuthorName}{$calendarTitle}{/if}</h3>
+	
+	<!-- <ul>
+		<li>Autor: {$calendarAuthorName}</li>
+		<li>Mail: {$calendarAuthorEmail}</li>
+		<li>Titulo: {$calendarTitle}</li>
+		<li>Tz: {$calendarTimezone}</li>
+	</ul>
+	-->
+</div>
+
+<div class="toolBox">
+	<div style="float:left">
+		<input type="button" onclick="javascript:GCalFaces.addForm();" value="Nuevo Evento" />&nbsp;&nbsp;
+	</div>
+	<div style="float:left">
+		<form id="quickAddForm" method="post" onsubmit="return GCalFaces.quickAdd('quickAddForm');">
+			Inserci&oacute;n R&aacute;pida <input type="text" id="quickAddContent" name="content" />
+		</form>
+	</div>
+
+	<div style="float: right">
+		<a href="main.php">Lista de calendarios</a>
+		<a href="logout.php">Cerrar sesi&oacute;n</a>
+	</div>
+	<div style="clear:both"></div>
+</div>
+<br />
+<div id="tv_tabs" class="tv_tabs">
+    <ul>
+        <li><a href="#tv_tab1"><span>Semana</span></a></li>
+        <li><a href="#tv_tab2"><span>Mes</span></a></li>
+    </ul>
+    <div id="tv_tab1" class="timeView">
+		<div> 
+			{gcalfaces_select_timeview horizontal_axis=S vertical_axis=D}
+		</div>	
+	</div>
+	<div id="tv_tab2" class="timeView">
+		<div> 
+			{gcalfaces_select_timeview horizontal_axis=D vertical_axis=S}
+		</div>	
+	</div>
+</div>
+
+<!-- 
+<br />
+
+{*gcalfaces_select_timeview hookClass="hookClass1"*}
+
+
+<div class="timeView">
+	<h3>TimeView ME</h3>
+	<div> 
+		{gcalfaces_select_timeview horizontal_axis=M vertical_axis=E groupTag=asignatura start_month=3 end_month=5 }
+	</div>	
+</div>
+<br />
+<br />
+<br />
+
+<div class="timeView">
+	<h3>TimeView DS</h3>
+	<div> 
+		{gcalfaces_select_timeview horizontal_axis=D vertical_axis=S groupTag=asignatura start_month=3 end_month=5 }
+	</div>	
+</div>
+
+<br />
+<br />
+<br />
+<div class="timeView">
+	<h3>TimeView DM</h3>
+	<div> 
+		{gcalfaces_select_timeview horizontal_axis=D vertical_axis=M groupTag=asignatura start_month=3 end_month=5}
+	</div>	
+</div>
+<br />
+<br />
+<br />
+<div class="timeView">
+	<h3>TimeView MD</h3>
+	<div> 
+		{gcalfaces_select_timeview horizontal_axis=M vertical_axis=D groupTag=asignatura start_month=3 end_month=5}
+	</div>	
+</div>
+<br />
+<br />
+<br />
+<div class="timeView">
+	<h3>TimeViewSD</h3>
+	<div> 
+		{gcalfaces_select_timeview horizontal_axis=S vertical_axis=D groupTag=asignatura start_month=3 end_month=5}
+	</div>	
+</div>
+<br />
+<br />
+<br />
+<div class="timeView">
+	<h3>TimeView SE</h3>
+	<div> 
+		{gcalfaces_select_timeview horizontal_axis=S vertical_axis=E groupTag=asignatura start_month=3 end_month=5}
+	</div>	
+</div>
+<br />
+<br />
+<br />
+<div class="timeView">
+	<h3>TimeView MS</h3>
+	<div> 
+		{gcalfaces_select_timeview horizontal_axis=M vertical_axis=S groupTag=asignatura start_month=3 end_month=5}
+	</div>	
+</div>
+<br />
+<br />
+<br />
+<div class="timeView">
+	<h3>TimeView SM</h3>
+	<div> 
+		{gcalfaces_select_timeview horizontal_axis=S vertical_axis=M groupTag=asignatura start_month=3 end_month=5}
+	</div>	
+</div>
+<br />
+<br />
+<br />
+<div class="timeView">
+	<h3>TimeView ME</h3>
+	<div> 
+		{gcalfaces_select_timeview horizontal_axis=M vertical_axis=E groupTag=asignatura start_month=3 end_month=5}
+	</div>	
+</div>
+-->
+
+<div id="debug"></div>
+{include file="$templateFolder/footer.html"}

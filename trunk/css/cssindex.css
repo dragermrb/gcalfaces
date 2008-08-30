@@ -1,0 +1,73 @@
+/* CSS Document */
+
+body {
+	margin:0px;
+	padding:0px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#000000;
+	background:url(../images/fndweb.gif) repeat-x;
+	}
+.clear {clear:both;}
+.tverde {color:#708e35;}
+
+a:link, a:visited {color:#000000; text-decoration:none;}
+a:hover {color:#708e35; text-decoration:underline;}
+
+.contenedor {
+	width:950px;
+	min-height:300px;
+	height:auto; 
+	position:absolute;
+	left:50%;
+	margin-left:-475px; 
+	}
+.logo {
+	float:left;
+	}
+
+.titular {
+	float:left;
+	margin:8px 0px 0px 74px;
+	}
+h1 {
+	font-family:Verdana, Arial, Helvetica, sans-serif, "Century Gothic"; 
+	font-size:20px; 
+	color: #666666;
+	}
+.descripcion {
+	float:left;
+	width:484px;
+	}
+.texto {
+	float:left;
+	width:475px;
+	height:auto;
+	margin:10px 0px 0px 5px;
+	text-align:justify;
+	}
+.prestaciones {
+	float:left;
+	width:475px;
+	height:auto;
+	margin:20px 0px 0px 5px;
+	text-align:left;
+	}
+	
+.imagenes {
+	float:right;
+	width:466px;
+}
+	
+.logos {
+	float:left;
+	width:466px;
+	height:250px;
+}
+
+.btnEntrar {
+	font-size: 16px;
+	border: 2px solid;
+	padding: 2px;
+}
+

@@ -1,0 +1,196 @@
+.tvMD_control, .tvMD_links, .tvMD_header {
+	clear: both;
+	/*float: left;*/
+	width: 100%;
+	color: #FFF;
+}
+.tvMD_control {
+	background: #FF9900;
+	padding: 2px 0px;
+}
+.tvMD_links {
+	background: #EEF5FA;
+	padding: 2px 0px;
+}
+.tvMD_control, .tvMD_links {
+	font-weight: bold;
+	font-size: 80%;
+	letter-spacing: 1px;
+}
+.tvMD_links label {
+	padding: 2px 5px;
+	color: #888;
+}
+.tvMD_clear, .tvMD_prev {
+	float: left;
+	width: 34%;
+}
+.tvMD_current {
+	float: left;
+	width: 30%;
+	text-align: center;
+}
+.tvMD_close, .tvMD_next {
+	float: right;
+	width: 34%;
+	text-align: right;
+}
+.tvMD_header {
+	padding: 1px 0 3px;
+	background: #6DAAD9;
+	text-align: center;
+	font-weight: bold;
+	height: 1.3em;
+}
+
+
+.tvMD_title-row {
+	background: #ACD3F0;
+	color: #000;
+}
+.tvMD_title-row .tvMD_week-end-cell {
+	background: #ACD3F0;
+}
+.tvMD_days-row {
+	background: #FFF;
+	color: #666;
+}
+.tvMD_week-col {
+	background: #ACD3F0;
+	color: #000;
+	text-align: center;
+}
+.tvMD_days-cell {
+	color: #000;
+	border: 1px solid #DDD;
+}
+.tvMD_days-cell a {
+	display: block;
+}
+.tvMD_week-end-cell {
+	background: #EEF5FA;
+}
+.tvMD_unselectable {
+	color: #888;
+}
+.tvMD_week-over, .tvMD_week-over .tvMD_week-end-cell {
+	background: #ACD3F0 !important;
+}
+.tvMD_days-cell-over, .tvMD_days-cell-over.tvMD_week-end-cell {
+	background: #FFF !important;
+	border: 1px solid #777;
+}
+.tvMD_today {
+	background: #ACD3F0 !important;
+}
+.tvMD_current-day {
+	background: #6DAAD9 !important;
+}
+.tvMD_status {
+	background: #EEF5FA;
+	width: 100%;
+	font-size: 80%;
+	text-align: center;
+}
+#tvMD_div a, .tvMD_inline a {
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	background: none;
+	color: #000;
+}
+.tvMD_inline .tvMD_links a {
+	padding: 0 5px !important;
+}
+.tvMD_control a, .tvMD_links a {
+	padding: 2px 5px !important;
+	color: #000 !important;
+}
+.tvMD_title-row a {
+	color: #000 !important;
+}
+.tvMD_control a:hover {
+	background: #FDD !important;
+	color: #333 !important;
+}
+.tvMD_links a:hover, .tvMD_title-row a:hover {
+	background: #FFF !important;
+	color: #333 !important;
+}
+.tvMD_one-month {
+	border: 2px #CCC solid;
+}
+
+.tvMD_cover {
+	display: none;
+	display/**/: block;
+	position: absolute;
+	z-index: -1;
+	filter: mask();
+	top: -4px;
+	left: -4px;
+	width: 193px;
+	height: 200px;
+}
+
+.tvMD_structure{
+	position: relative;
+	overflow: hidden;
+}
+
+table.tvMD {
+	width: 100%;
+	text-align: right;
+}
+table.tvMD td {
+	vertical-align:top;
+}
+table.tvMD td a {
+	padding: .1em .3em .1em 0;
+	display: block;
+	color: #ffffff;
+	background: #0a60d6;
+	cursor: pointer;
+	border: 1px solid #eeeeee;
+	height: 10px;
+}
+table.tvMD td a:hover {
+	border: 1px solid #dddddd;
+	color: #ffffff;
+	background: #1484e6;
+}
+table.tvMD td a:active {
+	border: 1px solid #dddddd;
+	color: #e69700;
+	background: #e6e6e6;
+}
+table.tvMD .tvMD_title-row td {
+	padding: .3em 0;
+	text-align: center;
+	font-size: .9em;
+	color: #222222;
+	text-transform: uppercase;
+	/*border-bottom: 1px solid #ffffff;*/
+}
+
+table.tvMD .tvMD_title-row td a {
+	color: #222222;
+}
+
+.tvMD_event{
+	border: 1px solid #6DAAD9;
+	cursor: pointer;
+}
+
+.tvMD_cellfill{
+	min-height: 55px;
+}
+
+.tvMD_goNext, .tvMD_goPrev{
+	background: #ACD3F0 !important;
+	border: 0px !important;
+	display: inline !important;
+	height: auto !important;
+	padding: 0px !important;
+	cursor: pointer;
+}

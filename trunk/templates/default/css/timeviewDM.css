@@ -1,0 +1,59 @@
+.tvDM_structure{
+	position: relative;
+	border: 2px #CCF solid;
+	background-color: #CCF;
+	overflow: hidden;
+}
+.tvDM_currentTime{
+	background-color: #ffffca !important;
+}
+
+.tvDM_colheaders{
+	background-color: #F00;
+}
+
+.tvDM_colheader{
+	background-color: #FF0;
+	width: 10%;
+	float:left;
+}
+.tvDM_colbody{
+	background-color: #CCF;
+	float:left;
+	width: 90%;
+}
+.tvDM_ch_item{
+	background-color: #0F0;
+	float:left;
+}
+.tvDM_rows{
+	background-color: #00F;
+}
+.tvDM_rowheader{
+	background-color: #FF0;
+	width: 10%;
+	float:left;
+}
+.tvDM_rowbody{
+	background-color: #CCF;
+	float:left;
+	width: 90%;
+}
+.tvDM_timecell{
+	background-color: #FFF;
+	float:left;
+}
+.tvDM_event{
+	background-color: #0FF;
+	margin-bottom: 3px;
+}
+.tvDM_eventname{
+	background-color: #FF0;
+	width: 10%;
+	float:left;
+}
+.tvDM_eventbody{
+	background-color: #F0F;
+	float:left;
+	width: 90%;
+}

@@ -1,0 +1,82 @@
+{include file="$templateFolder/header.html"}
+<script>
+{literal}
+	$(document).ready(function(){
+		$("#tv_tabs > ul").tabs();
+	});
+{/literal}
+</script>
+
+<div class="headerInfo">
+	<h2>Gesti&oacute;n del calendario</h2>
+	<h3>{$calendarAuthorName} {if $calendarAuthorEmail!=''}&lang;{$calendarAuthorEmail}&rang;{/if}</h3>
+	<h3>{if $calendarTitle!=$calendarAuthorName}{$calendarTitle}{/if}</h3>
+
+</div>
+
+<div class="toolBox">
+	<div style="float:left">
+		<input type="button" onclick="javascript:GCalFaces.addForm();" value="Nuevo Evento" />&nbsp;&nbsp;
+	</div>
+	<div style="float:left">
+		<form id="quickAddForm" method="post" onsubmit="return GCalFaces.quickAdd('quickAddForm');">
+			Inserci&oacute;n R&aacute;pida <input type="text" id="quickAddContent" name="content" />
+		</form>
+	</div>
+
+	<div style="float: right">
+		<a href="main.php">Lista de calendarios</a>
+		<a href="logout.php">Cerrar sesi&oacute;n</a>
+	</div>
+	<div style="clear:both"></div>
+</div>
+<br />
+<div id="tv_tabs" class="tv_tabs">
+    <ul>
+        <li><a href="#tv_tab1"><span>Tipo DS</span></a></li>
+        <li><a href="#tv_tab2"><span>Tipo MD</span></a></li>
+        <li><a href="#tv_tab3"><span>Tipo ME</span></a></li>
+        <li><a href="#tv_tab4"><span>Tipo MS</span></a></li>
+        <li><a href="#tv_tab5"><span>Tipo SD</span></a></li>
+        <li><a href="#tv_tab6"><span>Tipo SE</span></a></li>
+        <li><a href="#tv_tab7"><span>Tipo SM</span></a></li>
+    </ul>
+    <div id="tv_tab1" class="timeView">
+		<div> 
+			{gcalfaces_select_timeview horizontal_axis=D vertical_axis=S}
+		</div>	
+	</div>
+	<div id="tv_tab2" class="timeView">
+		<div> 
+			{gcalfaces_select_timeview horizontal_axis=M vertical_axis=D}
+		</div>	
+	</div>
+	<div id="tv_tab3" class="timeView">
+		<div> 
+			{gcalfaces_select_timeview horizontal_axis=M vertical_axis=E}
+		</div>	
+	</div>
+	<div id="tv_tab4" class="timeView">
+		<div> 
+			{gcalfaces_select_timeview horizontal_axis=M vertical_axis=S}
+		</div>	
+	</div>
+	<div id="tv_tab5" class="timeView">
+		<div> 
+			{gcalfaces_select_timeview horizontal_axis=S vertical_axis=D}
+		</div>	
+	</div>
+	<div id="tv_tab6" class="timeView">
+		<div> 
+			{gcalfaces_select_timeview horizontal_axis=S vertical_axis=E}
+		</div>	
+	</div>
+	<div id="tv_tab7" class="timeView">
+		<div> 
+			{gcalfaces_select_timeview horizontal_axis=S vertical_axis=M}
+		</div>	
+	</div>
+</div>
+
+<div id="debug"></div>
+{include file="$templateFolder/footer.html"}

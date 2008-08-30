@@ -1,0 +1,65 @@
+<script language="javascript" type="text/javascript">
+{literal}
+	$(document).ready(function(){
+		$('.date').datepicker({dateFormat: 'dd/mm/yy', firstDay: 1, beforeShow: customRange});
+	});
+
+	function customRange(input) { 
+		return {minDate: (input.id == 'endDate' ? $('#startDate').datepicker('getDate') : null), 
+			maxDate: (input.id == 'startDate' ? $('#endDate').datepicker('getDate') : null)}; 
+	} 
+{/literal}
+</script>
+
+<form id="addEventForm" name="addEventForm" action="">	
+	<div class="singleEvent">
+		<p>Nuevo Evento</p>
+		
+		<div class="itemForm">
+			<div class="itemFormTitulo">T&iacute;tulo</div>
+			<div class="itemFormInput">
+				<input type="text" class="inputNode" name="title" />
+			</div>
+		</div>
+		
+		<div class="itemForm">
+			<div class="itemFormTitulo">Lugar</div>
+			<div class="itemFormInput"><input type="text" class="inputNode" name="where" />
+			</div>
+		</div>
+		
+		<div class="itemForm">
+			<div class="itemFormTitulo">Descripci&oacute;n</div>
+			<div class="itemFormInput"><input type="text" class="inputNode" name="content" />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Fecha Inicio</div>
+			<div class="itemFormInput">
+				<input type="text" id="startDate" name="startDate" class="date inputNode" value="{$startDate}" />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Fecha Fin</div>
+			<div class="itemFormInput">
+				<input type="text" id="endDate" name="endDate" class="date inputNode" /><br />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Hora Inicio</div>
+			<div class="itemFormInput"><input type="text" class="inputNode" name="startTime" /><br />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Hora Fin</div>
+			<div class="itemFormInput"><input type="text" class="inputNode" name="endTime" />
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+	<div class="clear"></div>
+	
+	<input type="button" value="Crear"
+		onclick="GCalFaces.addEvent('addEventForm');" />
+</form>

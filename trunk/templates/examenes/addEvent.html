@@ -1,0 +1,177 @@
+<script language="javascript" type="text/javascript">
+{literal}
+	$(document).ready(function(){
+		$('.date').datepicker({dateFormat: 'dd/mm/yy', firstDay: 1});
+	});
+{/literal}
+</script>
+
+<br />
+<form id="addEventForm" name="addEventForm" action="">
+	<input type="hidden" name="tagName" value="asignatura" />
+	
+	<div class="itemForm">
+		<div class="itemFormTitulo">Asignatura</div>
+		<div class="itemFormInput">
+			<input type="text" class="inputNode" name="tagValue" />
+		</div>
+	</div>
+	<div class="clear"></div>
+	<br />
+	
+	<div class="singleEvent">
+		<p>Primer examen</p>
+		
+		<div class="itemForm">
+			<div class="itemFormTitulo">T&iacute;tulo</div>
+			<div class="itemFormInput">
+				<input type="text" class="inputNode" name="title[0]" />
+			</div>
+		</div>
+		
+		<div class="itemForm">
+			<div class="itemFormTitulo">Lugar</div>
+			<div class="itemFormInput"><input type="text" class="inputNode" name="where[0]" />
+			</div>
+		</div>
+		
+		<div class="itemForm">
+			<div class="itemFormTitulo">Descripci&oacute;n</div>
+			<div class="itemFormInput"><input type="text" class="inputNode" name="content[0]" />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Fecha Inicio</div>
+			<div class="itemFormInput"><input type="text" name="startDate[0]" class="date inputNode" value="{$startDate}" />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Fecha Fin</div>
+			<div class="itemFormInput"><input type="text" name="endDate[0]" class="date inputNode" /><br />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Hora Inicio</div>
+			<div class="itemFormInput"><input type="text" class="inputNode" name="startTime[0]" /><br />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Hora Fin</div>
+			<div class="itemFormInput"><input type="text" class="inputNode" name="endTime[0]" />
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	
+
+	<div class="singleEvent">
+		<p>Segundo examen</p>
+	
+		<div class="itemForm">
+			<div class="itemFormTitulo">T&iacute;tulo</div>
+			<div class="itemFormInput">
+				<input type="text" class="inputNode" name="title[1]" />
+			</div>
+		</div>
+	
+		<div class="itemForm">
+			<div class="itemFormTitulo">Lugar</div>
+			<div class="itemFormInput">
+				<input type="text" class="inputNode" name="where[1]" />
+			</div>
+		</div>
+	
+		<div class="itemForm">
+			<div class="itemFormTitulo">Descripci&oacute;n</div>
+			<div class="itemFormInput">
+				<input type="text" class="inputNode" name="content[1]" />
+			</div>
+		</div>
+	
+		<div class="itemForm">
+			<div class="itemFormTitulo">Fecha Inicio</div>
+			<div class="itemFormInput">
+				<input type="text" name="startDate[1]" class="date inputNode" />
+			</div>
+		</div>
+	
+		<div class="itemForm">
+			<div class="itemFormTitulo">Fecha Fin</div>
+			<div class="itemFormInput">
+				<input type="text" name="endDate[1]" class="date inputNode" />
+			</div>
+		</div>
+	
+		<div class="itemForm">
+			<div class="itemFormTitulo">Hora Inicio</div>
+			<div class="itemFormInput">
+				<input type="text" class="inputNode" name="startTime[1]" />
+			</div>
+		</div>
+	
+		<div class="itemForm">
+			<div class="itemFormTitulo">Hora Fin</div>
+			<div class="itemFormInput">
+				<input type="text" class="inputNode" name="endTime[1]" />
+			</div>
+		</div>
+	</div>
+	
+	<div class="singleEvent">
+		<p>Tercer examen</p>
+	
+		<div class="itemForm">
+			<div class="itemFormTitulo">T&iacute;tulo</div>
+			<div class="itemFormInput">
+				<input type="text" class="inputNode" name="title[2]" />
+			</div>
+		</div>
+	
+		<div class="itemForm">
+			<div class="itemFormTitulo">Lugar</div>
+			<div class="itemFormInput">
+				<input type="text" class="inputNode" name="where[2]" />
+			</div>
+		</div>
+	
+		<div class="itemForm">
+			<div class="itemFormTitulo">Descripci&oacute;n</div>
+			<div class="itemFormInput">
+				<input type="text" class="inputNode" name="content[2]" />
+			</div>
+		</div>
+	
+		<div class="itemForm">
+			<div class="itemFormTitulo">Fecha Inicio</div>
+			<div class="itemFormInput">
+				<input type="text" name="startDate[2]" class="date inputNode" />
+			</div>
+		</div>
+	
+		<div class="itemForm">
+			<div class="itemFormTitulo">Fecha Fin</div>
+			<div class="itemFormInput">
+				<input type="text" name="endDate[2]" class="date inputNode" />
+			</div>
+		</div>
+	
+		<div class="itemForm">
+			<div class="itemFormTitulo">Hora Inicio</div>
+			<div class="itemFormInput">
+				<input type="text" class="inputNode" name="startTime[2]" />
+			</div>
+		</div>
+	
+		<div class="itemForm">
+			<div class="itemFormTitulo">Hora Fin</div>
+			<div class="itemFormInput">
+				<input type="text" class="inputNode" name="endTime[2]" />
+			</div>
+		</div>
+	</div>
+	
+	<div class="clear"></div>
+	
+	<input type="button" value="Crear"
+		onclick="GCalFaces.addEvent('addEventForm');" />
+</form>

@@ -1,0 +1,32 @@
+{include file="default/header.html"}
+
+<div class="listCals">
+	<h1>&nbsp;&nbsp;GCalFaces - Selecci&oacute;n de calendario</h1>
+	<h2>&nbsp;&nbsp;&nbsp;{$userName}, {$userEmail}</h2>
+	<br />
+	<form action="main.php" method="get">
+		<input type="hidden" name="action" value="form" />
+		
+		<div class="lc_options">
+			<div class="lc_title">Temas disponibles</div>
+			<select name="theme">
+				<option value="">Autom&aacute;tico</option>
+			   {html_options values=$themes output=$themes}
+			</select>&nbsp;&nbsp;&nbsp;
+			
+			<label><input type="checkbox" name="assign" /> Asignar permanentemente</label>
+		</div>
+		
+		<div class="lc_list">
+			<div class="lc_title">Calendarios</div>		
+			{foreach name=calendars from=$calendars item=cal}
+				<label><input type="radio" name="feed" value="{$cal.id}" {if $smarty.foreach.calendars.first}checked {/if}/>{$cal.calendarTitle}</label><br />
+		    {foreachelse}
+		    	Sin calendarios
+			{/foreach}
+		</div>
+
+		&nbsp;&nbsp;&nbsp;<input type="submit" value="Entrar" />
+	</form>
+</div>
+{include file="default/footer.html"}

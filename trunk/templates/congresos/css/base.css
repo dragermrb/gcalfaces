@@ -1,0 +1,248 @@
+body { 
+background:#e6e6e6;
+/*padding:0px;*/ 
+font-family:Verdana, Arial, Helvetica, sans-serif, "Century Gothic"; 
+font-size:10px; 
+color:#000;
+}
+
+.headerInfo{
+	border: 2px #EDEFF4 solid;
+	background: #3B5998;
+}
+
+.headerInfo h2{
+	color: #FFF;
+	font-weight: bold;
+}
+
+.headerInfo h3{
+	color: #FFF;
+	font-weight: bold;
+}
+
+.toolBox{
+	border: 2px #EDEFF4 solid;
+	background: #D8DFEA;
+}
+
+.toolBox a{
+	color: #000;
+}
+
+.tv_tabs{
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+.timeView{
+	/*border: 2px #CCF solid;*/
+}
+
+div.clear {
+  clear: both;
+}
+
+.singleEvent{
+	width: 350px;
+	float: left;
+	border: 1px #3B5998 solid;
+	background: #D8DFEA;
+	padding: 5px 5px 5px 5px;
+	margin: 2px 0 0 20px;
+}
+
+.singleEvent p{
+	color: #3B5998;
+	font-weight: bold;
+	
+}
+
+.itemForm{
+	float: left;
+	width: 350px;
+}
+
+.itemFormTitulo{
+	color: #3B5998;
+	font-weight: bold;
+	width: 80px;
+	float: left;
+	/*background: #D8DFEA;*/
+	padding-left: 4px;
+}
+
+.itemFormInput{
+	width: 130px;
+	float: left;
+}
+
+.date{
+	text-align: center;
+}
+
+.inputNode{
+	width: 110px;
+	border: 1px #3B5998 solid;
+}
+
+.btnSave{
+	width: 24px;
+	height: 24px;
+	background: #FFF url(../images/save.png) no-repeat;
+	border: 0px;
+}
+.btnDelete{
+	width: 24px;
+	height: 24px;
+	background: #FFF url(../images/delete.png) no-repeat;
+	border: 0px;
+}
+/**************************** Lista de calendarios ****************************/
+.listCals{
+	border: 1px #060685 solid;
+	background: #FFF;
+	padding: 5px;
+	left:50%;
+	top:50%;
+	position:absolute;
+	vertical-align:middle;
+	width: 500px;
+	margin-left:-250px;
+	margin-top:-250px;	
+}
+
+.lc_options{
+	width: 320px;
+	border: 1px #060685 solid;	
+	margin: 15px;
+	padding: 0px;
+	background:  #C3DFF4;
+	
+}
+
+.lc_list{
+	width: 320px;
+	border: 1px #060685 solid;
+	margin: 15px;
+	padding: 0px;
+	background:  #C3DFF4;
+	color: #060685;
+}
+
+.lc_title{
+	width: 100%;
+	height: 20px;
+	font-weight: bold;
+	background: #6fb4ea;
+	color: #060685;
+	margin-bottom: 10px;
+}
+
+/***************** Flora theme *****************/
+.ui-wrapper { border: 1px solid #50A029; }
+.ui-wrapper input, .ui-wrapper textarea { border: 0; }
+
+
+/* Caution! Ensure accessibility in print and other media types... */
+@media projection, screen { /* Use class for showing/hiding tab content, so that visibility can be better controlled in different media types... */
+    .ui-tabs-hide {
+        display: none;
+    }
+}
+
+/* Hide useless elements in print layouts... */
+@media print {
+    .ui-tabs-nav {
+        display: none;
+    }
+}
+
+/* Skin */
+.ui-tabs-nav, .ui-tabs-panel {
+    /*font-family: "Trebuchet MS", Trebuchet, Verdana, Helvetica, Arial, sans-serif;*/
+    /*font-size: 12px;*/
+}
+.ui-tabs-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 3px;
+}
+.ui-tabs-nav:after { /* clearing without presentational markup, IE gets extra treatment */
+    display: block;
+    clear: both;
+    content: " ";
+}
+.ui-tabs-nav li {
+    float: left;
+    margin: 0 0 0 2px;
+    font-weight: bold;
+}
+.ui-tabs-nav a, .ui-tabs-nav a span {
+    float: left; /* fixes dir=ltr problem and other quirks IE */
+    padding: 0 12px;
+    background: url(tabs.png) no-repeat;
+}
+.ui-tabs-nav a {
+    margin: 5px 0 0; /* position: relative makes opacity fail for disabled tab in IE */
+    padding-left: 0;
+    background-position: 100% 0;
+    text-decoration: none;
+    white-space: nowrap; /* @ IE 6 */
+    outline: 0; /* @ Firefox, prevent dotted border after click */    
+}
+.ui-tabs-nav a:link, .ui-tabs-nav a:visited {
+    color: #3B5998;
+}
+.ui-tabs-nav .ui-tabs-selected a {
+    position: relative;
+    top: 1px;
+    z-index: 2;
+    margin-top: 0;
+    background-position: 100% -23px;
+}
+.ui-tabs-nav a span {
+    padding-top: 1px;
+    padding-right: 0;
+    height: 20px;
+    background-position: 0 0;
+    line-height: 20px;
+}
+.ui-tabs-nav .ui-tabs-selected a span {
+    padding-top: 0;
+    height: 27px;
+    background-position: 0 -23px;
+    line-height: 27px;
+}
+.ui-tabs-nav .ui-tabs-selected a:link, .ui-tabs-nav .ui-tabs-selected a:visited,
+.ui-tabs-nav .ui-tabs-disabled a:link, .ui-tabs-nav .ui-tabs-disabled a:visited { /* @ Opera, use pseudo classes otherwise it confuses cursor... */
+    cursor: text;
+}
+.ui-tabs-nav a:hover, .ui-tabs-nav a:focus, .ui-tabs-nav a:active,
+.ui-tabs-nav .ui-tabs-unselect a:hover, .ui-tabs-nav .ui-tabs-unselect a:focus, .ui-tabs-nav .ui-tabs-unselect a:active { /* @ Opera, we need to be explicit again here now... */
+    cursor: pointer;
+}
+.ui-tabs-disabled {
+    opacity: .4;
+    filter: alpha(opacity=40);
+}
+.ui-tabs-nav .ui-tabs-disabled a:link, .ui-tabs-nav .ui-tabs-disabled a:visited {
+    color: #000;
+}
+.ui-tabs-panel {
+    border: 1px solid #3B5998;
+    padding: 10px;
+    background: #fff; /* declare background color for container to avoid distorted fonts in IE while fading */
+}
+/*.ui-tabs-loading em {
+    padding: 0 0 0 20px;
+    background: url(loading.gif) no-repeat 0 50%;
+}*/
+
+/* Additional IE specific bug fixes... */
+* html .ui-tabs-nav { /* auto clear @ IE 6 & IE 7 Quirks Mode */
+    display: inline-block;
+}
+*:first-child+html .ui-tabs-nav  { /* auto clear @ IE 7 Standards Mode - do not group selectors, otherwise IE 6 will ignore complete rule (because of the unknown + combinator)... */
+    display: inline-block;
+}

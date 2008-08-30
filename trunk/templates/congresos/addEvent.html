@@ -1,0 +1,153 @@
+<script language="javascript" type="text/javascript">
+{literal}
+	$(document).ready(function(){
+		$('.date').datepicker({dateFormat: 'dd/mm/yy', firstDay: 1, beforeShow: AECustomRange});
+	});
+	
+	function AECustomRange(input) {
+		var minDate=null;
+		var maxDate=null;
+		
+		switch(input.id){
+			/*
+			case 'startDate0':
+				minDate=null;
+				maxDate=$('#endDate0').datepicker('getDate');
+				break;
+			case 'endDate0':
+				minDate=$('#startDate0').datepicker('getDate');
+				maxDate=null;
+				break;
+				
+			case 'startDate1':
+				minDate=null;
+				maxDate=$('#endDate1').datepicker('getDate');
+				break;
+			case 'endDate1':
+				minDate=$('#startDate1').datepicker('getDate');
+				maxDate=null;
+				break;
+			*/
+			case 'startDate2':
+				minDate=null;
+				maxDate=$('#endDate2').datepicker('getDate');
+				break;
+			case 'endDate2':
+				minDate=$('#startDate2').datepicker('getDate');
+				maxDate=null;
+				break;
+			default:
+				minDate=null;
+				maxDate=null;
+		}
+	 
+		return {minDate: minDate, maxDate: maxDate}; 
+	}
+	
+	function addCongress(formId){
+		var tagValue=$('#tagValue').val();
+		$('#content0').val('Deadline '+tagValue);
+		$('#content1').val('Notification '+tagValue);
+		$('#content2').val('Congress '+tagValue);
+		
+		$('#endDate0').val($('#startDate0').val());
+		$('#endDate1').val($('#startDate1').val());
+		
+		//tagValue=tagValue.replace(' ', '_');
+		//tagValue=tagValue.replace('.', '_');
+		
+		$('#tagValue').val(tagValue);
+		
+		GCalFaces.addEvent(formId);
+	}
+{/literal}
+</script>
+
+<h2 style="color: #3B5998">Nuevo Congreso</h2>
+<br />
+<form id="addEventForm" name="addEventForm" action="">
+	<input type="hidden" name="tagName" value="congreso" />
+
+	<div class="itemForm">
+		<div class="itemFormTitulo">Nombre</div>
+		<div class="itemFormInput">
+			<input type="text" id="tagValue" style="width: 240px" class="inputNode" name="tagValue" />
+		</div>
+	</div>
+	<div class="clear"></div>
+	<br />
+
+	<div class="singleEvent">
+		<div class="itemForm">
+			<div class="itemFormTitulo">Deadline</div>
+			<input type="hidden" id="title0" name="title[0]" value="Deadline" />
+			<input type="hidden" id="content0" name="content[0]" value="" />
+			<input type="hidden" id="endDate0" name="endDate[0]" />
+			<div class="itemFormInput">
+				<input type="text" id="startDate0" name="startDate[0]" class="date inputNode" />
+			</div>
+		</div>
+	</div>
+	
+	<div class="clear"></div>
+
+	<div class="singleEvent">
+		<div class="itemForm">
+			<div class="itemFormTitulo">Notification</div>
+			<input type="hidden" id="title1" name="title[1]" value="Notification" />
+			<input type="hidden" id="content1" name="content[1]" value="" />
+			<input type="hidden" id="endDate1" name="endDate[1]" />
+			<div class="itemFormInput">
+				<input type="text" id="startDate1" name="startDate[1]" class="date inputNode" />
+			</div>
+		</div>
+	</div>
+	
+	<div class="clear"></div>
+	
+	<div class="singleEvent">
+		<div class="itemForm">
+			<div class="itemFormTitulo">Congreso</div>
+			<input type="hidden" id="title2" name="title[2]" value="Congreso" />
+			<input type="hidden" id="content2" name="content[2]" value="" />
+			<div class="itemFormInput">
+				<input type="text" id="startDate2" name="startDate[2]" class="date inputNode" />
+			</div>
+			<div class="itemFormInput">
+				<input type="text" id="endDate2" name="endDate[2]" class="date inputNode" />
+			</div>
+		</div>
+	
+
+		<!-- <div class="itemForm">
+			<div class="itemFormTitulo">Hora Inicio</div>
+			<div class="itemFormInput">
+				<input type="text" class="inputNode" name="startTime[2]" />
+			</div>
+		</div>
+	
+		<div class="itemForm">
+			<div class="itemFormTitulo">Hora Fin</div>
+			<div class="itemFormInput">
+				<input type="text" class="inputNode" name="endTime[2]" />
+			</div>
+		</div>-->
+	</div>
+	
+	<div class="clear"></div>
+	
+	<div class="singleEvent">
+		<div class="itemForm">
+			<div class="itemFormTitulo">Lugar</div>
+			<div class="itemFormInput">
+				<input type="text" style="width: 240px" class="inputNode" name="where" />
+			</div>
+		</div>
+	</div>
+	
+	<div class="clear"></div>
+	<br />
+	
+	<input type="button" value="Crear"
+		onclick="addCongress('addEventForm')" />
+</form>

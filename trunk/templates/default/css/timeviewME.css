@@ -1,0 +1,75 @@
+.tvME_structure{
+	position: relative;
+	border: 2px #CCCCCC solid;
+	background-color: #CCCCCC;
+	overflow: hidden;
+}
+.tvME_currentTime{
+	opacity: 0.6;
+	background-color: #FFFFCC;
+	width:1%;
+	height: 100%;
+	z-index: 50;
+}
+
+.tvME_colheaders{
+	margin: 1px;
+}
+
+.tvME_colheader{
+	background: #ACD3F0;
+	width: 10%;
+	float:left;
+	height: 17px;
+	vertical-align: middle;
+}
+.tvME_colbody{
+	float:left;
+	width: 90%;
+}
+
+.tvME_ch_item{
+	float:left;
+	background: #ACD3F0;
+	text-align: center;
+	vertical-align: middle;
+	color: #000;
+	height: 17px;
+	overflow: hidden;
+}
+
+.tvME_ch_item a{
+	cursor: pointer;
+}
+
+.tvME_rows{
+	background-color: #EEF5FA;
+}
+.tvME_row{
+	background: #FFF;
+	color: #000;
+	border: 1px #DDDDDD solid;
+}
+.tvME_rowheader{
+	cursor:pointer;
+	width: 10%;
+	float:left;
+	background: #6DAAD9;
+	text-align: left;
+	font-weight: bold;
+	color: #FFF;
+	height: 15px;
+	overflow: hidden;
+}
+.tvME_rowbody{
+	float:left;
+	width: 89.5%;
+}
+.tvME_timecell{
+	cursor:pointer;
+	background: #ACD3F0;
+	float:left;
+	height: 15px;
+	border-left: 1px #FFF solid;
+	border-rigth: 1px #FFF solid; 
+}

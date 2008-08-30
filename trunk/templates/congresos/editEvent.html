@@ -1,0 +1,65 @@
+<script language="javascript" type="text/javascript">
+{literal}
+	$(document).ready(function(){
+		$('.date').datepicker({dateFormat: 'dd/mm/yy', firstDay: 1});
+	});
+{/literal}
+</script>
+
+
+<br />
+<h2 style="color: #3B5998">Editar Evento</h2>
+<br />
+<br />
+
+
+<div class="singleEvent">
+	<form name="editEventForm" id="editEventForm" action="">
+		<input  type="hidden" name="eventId" value="{$eventId}" />
+			
+		<p></p>
+		
+		<div class="itemForm">
+			<div class="itemFormTitulo">T&iacute;tulo</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="title0" name="title" value="{$title}" />
+			</div>
+		</div>
+		
+		<div class="itemForm">
+			<div class="itemFormTitulo">Lugar</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="where0" name="where" value="{$where}" />
+			</div>
+		</div>
+		
+		<div class="itemForm">
+			<div class="itemFormTitulo">Descripci&oacute;n</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="content0" name="content" value="{$content}" />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Fecha</div>
+			<div class="itemFormInput">
+				<input  type="text"id="startDate0" name="startDate" class="date inputNode" value="{$startDate}" />
+			</div>
+			<div class="itemFormInput">
+				<input  type="text" id="endDate0" name="endDate" class="date inputNode" value="{$endDate}" />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Hora</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="startTime0" name="startTime" value="{$startTime}" />
+			</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="endTime0" name="endTime" value="{$endTime}" />
+			</div>
+		</div>
+		<div class="clear"></div>
+		
+		<input type="button" value="Guardar" onclick="GCalFaces.editEvent('editEventForm');"/>
+		<input type="button" value="Borrar" onclick="GCalFaces.deleteEvent('editEventForm');"/>
+	</form>
+</div>

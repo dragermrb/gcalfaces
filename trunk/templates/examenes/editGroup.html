@@ -1,0 +1,197 @@
+<script language="javascript" type="text/javascript">
+{literal}
+	$(document).ready(function(){
+		$('.date').datepicker({dateFormat: 'dd/mm/yy', firstDay: 1});
+	});
+{/literal}
+</script>
+
+<div class="itemForm">
+	<div class="itemFormTitulo">Asignatura</div>
+	<div class="itemFormInput">
+		<input type="text" class="inputNode" readonly value="{$tagValue}" />
+	</div>
+</div>
+<div class="clear"></div>
+<br />
+<div class="singleEvent">
+	<form name="editEventForm0" id="editEventForm0" action="">
+		<input  type="hidden" name="eventId" value="{$eventId[0]}" />
+		
+		<p>Primer examen</p>
+		
+		<div class="itemForm">
+			<div class="itemFormTitulo">T&iacute;tulo</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="title0" name="title" value="{$title[0]}" />
+			</div>
+		</div>
+		
+		<div class="itemForm">
+			<div class="itemFormTitulo">Lugar</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="where0" name="where" value="{$where[0]}" />
+			</div>
+		</div>
+		
+		<div class="itemForm">
+			<div class="itemFormTitulo">Descripci&oacute;n</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="content0" name="content" value="{$content[0]}" />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Fecha Inicio</div>
+			<div class="itemFormInput">
+				<input  type="text"id="startDate0" name="startDate" class="date inputNode" value="{$startDate[0]}" />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Fecha Fin</div>
+			<div class="itemFormInput">
+				<input  type="text" id="endDate0" name="endDate" class="date inputNode" value="{$endDate[0]}" />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Hora Inicio</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="startTime0" name="startTime" value="{$startTime[0]}" />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Hora Fin</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="endTime0" name="endTime" value="{$endTime[0]}" />
+			</div>
+		</div>
+		<div class="clear"></div>
+		
+		<input type="button" value="Guardar" onclick="GCalFaces.editEvent('editEventForm0');"/>
+		<input type="button" value="Borrar Examen" onclick="GCalFaces.deleteEvent('editEventForm0');"/>
+	</form>
+</div>
+
+<div class="singleEvent">
+	<form name="editEventForm1" id="editEventForm1" action="">
+		<input  type="hidden" name="eventId" value="{$eventId[1]}" />
+		
+		<p>Segundo examen</p>
+		
+		<div class="itemForm">
+			<div class="itemFormTitulo">T&iacute;tulo</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="title1" name="title" value="{$title[1]}" />
+			</div>
+		</div>
+		
+		<div class="itemForm">
+			<div class="itemFormTitulo">Lugar</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="where1" name="where" value="{$where[1]}" />
+			</div>
+		</div>
+		
+		<div class="itemForm">
+			<div class="itemFormTitulo">Descripci&oacute;n</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="content1" name="content" value="{$content[1]}" />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Fecha Inicio</div>
+			<div class="itemFormInput">
+				<input  type="text"id="startDate1" name="startDate" class="date inputNode" value="{$startDate[1]}" />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Fecha Fin</div>
+			<div class="itemFormInput">
+				<input  type="text" id="endDate1" name="endDate" class="date inputNode" value="{$endDate[1]}" />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Hora Inicio</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="startTime1" name="startTime" value="{$startTime[1]}" />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Hora Fin</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="endTime1" name="endTime" value="{$endTime[1]}" />
+			</div>
+		</div>
+		<div class="clear"></div>
+		
+		<input type="button" value="Guardar" onclick="GCalFaces.editEvent('editEventForm1');"/>
+		<input type="button" value="Borrar Examen" onclick="GCalFaces.deleteEvent('editEventForm1');"/>
+	</form>
+</div>
+
+<div class="singleEvent">
+	<form name="editEventForm2" id="editEventForm2" action="">
+		<input  type="hidden" name="eventId" value="{$eventId[2]}" />
+		
+		<p>Tercer examen</p>
+		
+		<div class="itemForm">
+			<div class="itemFormTitulo">T&iacute;tulo</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="title2" name="title" value="{$title[2]}" />
+			</div>
+		</div>
+		
+		<div class="itemForm">
+			<div class="itemFormTitulo">Lugar</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="where2" name="where" value="{$where[2]}" />
+			</div>
+		</div>
+		
+		<div class="itemForm">
+			<div class="itemFormTitulo">Descripci&oacute;n</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="content2" name="content" value="{$content[2]}" />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Fecha Inicio</div>
+			<div class="itemFormInput">
+				<input  type="text"id="startDate2" name="startDate" class="date inputNode" value="{$startDate[2]}" />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Fecha Fin</div>
+			<div class="itemFormInput">
+				<input  type="text" id="endDate2" name="endDate" class="date inputNode" value="{$endDate[2]}" />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Hora Inicio</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="startTime2" name="startTime" value="{$startTime[2]}" />
+			</div>
+		</div>
+		<div class="itemForm">
+			<div class="itemFormTitulo">Hora Fin</div>
+			<div class="itemFormInput">
+				<input  type="text" class="inputNode" id="endTime2" name="endTime" value="{$endTime[2]}" />
+			</div>
+		</div>
+		<div class="clear"></div>
+		
+		<input type="button" value="Guardar" onclick="GCalFaces.editEvent('editEventForm2');"/>
+		<input type="button" value="Borrar Examen" onclick="GCalFaces.deleteEvent('editEventForm2');"/>
+	</form>
+</div>
+
+	
+<div class="clear"></div>
+
+ <form name="editEventForm3" id="editEventForm3" action="">
+	<input  type="hidden" name="tagName" value="{$tagName}" />
+	<input  type="hidden" name="tagValue" value="{$tagValue}" />
+	
+	<input type="button" value="Borrar Asignatura" 
+		onclick="GCalFaces.deleteEvent('editEventForm3');"/>
+ </form>
