@@ -1,0 +1,4 @@
+GCalFaces.com - Gestor de Calendarios adaptado al usuario
+Copyright (C) 2008 Manuel Rodríguez Borrego, Javier Pavón Cabrera
+
+http://www.gcalfaces.com
