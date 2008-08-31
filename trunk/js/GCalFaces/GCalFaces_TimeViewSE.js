@@ -88,7 +88,12 @@ GCalFaces_TimeViewSE.prototype.drawStructure=function(){
 	for(var numWeek=1; numWeek<=numWeeks; numWeek++){
 		ch_item=document.createElement("div");
 		ch_item.className= "tvSE_ch_item";
-		ch_item.style.cssText = "width: "+ch_item_size.toFixed(2)+"%";
+		if (numWeek!=numWeeks){
+			ch_item.style.cssText = "width: "+ch_item_size.toFixed(2)+"%";
+		} else {
+			ch_item.style.cssText = "width: "+(ch_item_size.toFixed(2)-0.03)+"%";
+		}
+		
 		if (numWeek==1){
 			var pointerId=this.tvId;
 			var goPrevNode=document.createElement("a");
@@ -519,7 +524,7 @@ GCalFaces_TimeViewSE.prototype.refreshDraw=function(){
 		var widthHeader=$('.tvSE_colheader').outerWidth();
 		var widthCurrentTime=$('.tvSE_currentTime').outerWidth();
 		var widthTotal=$('.tvSE_colheaders').outerWidth();
-		var offset=(widthHeader/widthTotal)*100 - (widthCurrentTime/widthTotal)*100/2;
+		var offset=(widthHeader/widthTotal)*100 - (widthCurrentTime/widthTotal)*50;
 		var posInit=((now-this.startDate)/(this.endDate-this.startDate)*(100-offset))+offset;
 		
 		this.currentTime.style.cssText = "position: absolute; left: "+posInit.toFixed(2)+"%;";
@@ -530,10 +535,12 @@ GCalFaces_TimeViewSE.prototype.refreshDraw=function(){
 		var widthHeader=$('.tvSE_colheader').outerWidth();
 		var widthCurrentTime=$('.tvSE_currentTime').outerWidth();
 		var widthTotal=$('.tvSE_colheaders').outerWidth();
-		var offset=(widthHeader/widthTotal)*100 - (widthCurrentTime/widthTotal)*100/2;
+		var offset=(widthHeader/widthTotal)*100 - (widthCurrentTime/widthTotal)*50;
 		var posInit=((now-this.startDate)/(this.endDate-this.startDate)*(100-offset))+offset;
 		
-		this.currentTime.style.cssText = "position: absolute; left: "+posInit.toFixed(2)+"%;" ;
+		if (posInit){
+			this.currentTime.style.cssText = "position: absolute; left: "+posInit.toFixed(2)+"%;";
+		}		
 	}
 }
 

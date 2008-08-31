@@ -14,6 +14,8 @@
 </div>
 <div class="clear"></div>
 <br />
+
+{if $eventId[0]!=''}
 <div class="singleEvent">
 	<form name="editEventForm0" id="editEventForm0" action="">
 		<input  type="hidden" name="eventId" value="{$eventId[0]}" />
@@ -70,7 +72,9 @@
 		<input type="button" value="Borrar Examen" onclick="GCalFaces.deleteEvent('editEventForm0');"/>
 	</form>
 </div>
+{/if}
 
+{if $eventId[1]!=''}
 <div class="singleEvent">
 	<form name="editEventForm1" id="editEventForm1" action="">
 		<input  type="hidden" name="eventId" value="{$eventId[1]}" />
@@ -127,7 +131,9 @@
 		<input type="button" value="Borrar Examen" onclick="GCalFaces.deleteEvent('editEventForm1');"/>
 	</form>
 </div>
+{/if}
 
+{if $eventId[2]!=''}
 <div class="singleEvent">
 	<form name="editEventForm2" id="editEventForm2" action="">
 		<input  type="hidden" name="eventId" value="{$eventId[2]}" />
@@ -184,7 +190,7 @@
 		<input type="button" value="Borrar Examen" onclick="GCalFaces.deleteEvent('editEventForm2');"/>
 	</form>
 </div>
-
+{/if}
 	
 <div class="clear"></div>
 
