@@ -1,0 +1,15 @@
+GCalFaces.com - Gestor de Calendarios adaptado al usuario
+http://www.gcalfaces.com
+
+Requisitos
+==========
+  1. PHP versión 5.2 o superior
+
+Instalación
+===========
+
+  1. Copia el contenido de la carpeta principal de la apliacion en una ruta 
+     accesible desde una navegador web. 
+  2. Concede permisos de escritura a la carpeta templates_c.
+  3. Eso es todo. Introduce dirección url que apunta a la aplicación en el
+     navegador web y verifica que funciona correctamente.
