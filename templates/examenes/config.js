@@ -5,7 +5,7 @@
 	heightGroup: 250,
 	
 	addEventSuccess: function(eventData){
-		alert('Evento creado correctamente');
+		//alert('Evento creado correctamente');
 		tb_remove();
 	},
 	addEventError: function(responseData){
@@ -16,7 +16,7 @@
 	},
 	editEventSuccess: function(eventData){
 		alert('Evento modificado');
-		tb_remove();
+		//tb_remove();
 	},
 	editEventError: function(responseData){
 		alert('Evento no modificado. '+responseData.errorMsg);
@@ -25,7 +25,7 @@
 		alert("EEE: Ocurrió un error al contactar con GCalFaces. Inténtelo más tarde.");
 	},
 	deleteEventSuccess: function(eventData){
-		alert('Evento eliminado');
+		//alert('Evento eliminado');
 		tb_remove();
 	},
 	deleteEventError: function(responseData){
