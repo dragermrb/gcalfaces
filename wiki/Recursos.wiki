@@ -1,0 +1,6 @@
+#summary Recursos para desarrolladores
+
+= Recursos =
+
+  * [http://www.gacalfaces.com/phpdoc/ Documentación PHP]
+  * [http://www.gacalfaces.com/jsdoc/ Documentación JavaScript]
