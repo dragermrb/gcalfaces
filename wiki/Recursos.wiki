@@ -2,5 +2,5 @@
 
 = Recursos =
 
-  * [http://www.gacalfaces.com/phpdoc/ Documentación PHP]
-  * [http://www.gacalfaces.com/jsdoc/ Documentación JavaScript]
+  * [http://www.gcalfaces.com/phpdoc/ Documentación PHP]
+  * [http://www.gcalfaces.com/jsdoc/ Documentación JavaScript]
